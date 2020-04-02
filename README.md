@@ -7,7 +7,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 - [x] ~Readme markdown~
 - [x] ~Introduction~
 - [x] ~Sir Ronald Fisher~
-- [ ] Fisher's Iris data set
+- [x] ~Fisher's Iris data set~
 - [ ] 
 
 ## Table of contents
@@ -15,11 +15,9 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 ## Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962) 
 
-Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and geneticist, born in 1890 in London and died in 1962 in Adelaide, Australia. Described by Richard Dawkins as "the father of modern and experminetal design and the greatest of Dariwn's successors". Credited for numerous aspects of experimental design and modern statistica theory. 
+Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and geneticist, born in 1890 in London and died in 1962 in Adelaide, Australia. Described by Richard Dawkins as "the father of modern and experminetal design and the greatest of Dariwn's successors". Credited for numerous aspects of experimental design and modern statistical theory. 
 
 <img src="https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk" width="150px" />
-
-![Ronald Fisher](https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk)
 
 **Few Intresting Facts about R. Fisher**
 
@@ -28,6 +26,17 @@ Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and g
 - Creator of the F distribution and method of analysis of variance (ANOVA)
 - Writer of 7 books, which *Statistical Methods for Research Workers* and *The Design of Experiments* are considered to be most influential books on statistical methods of the 20th century's.
 - knighted by Queen Elizabeth in 1952, becoming Sir Ronald Aylmer Fisher.
+
+## Fisher's Iris data set
+
+Introduced by Ronal Fisher in 1936 in his paper *The use of multiple measurements in taxonomic problems* the Iris flower data set is a multivariate data set which was used to developed a linear discriminant model. Consists of three species of Iris flower (Iris setosa, Iris virginica, Iris versicolor) and four attributes from each specie: the length and the width of the sepals and petals, in centimeters. 
+
+### Content 
+
+The data set contains of 150 samples of three classes (species). Each class contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
+
+### Preview of Data 
+
 
 
 ## References 
@@ -42,3 +51,8 @@ Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962)
 - [https://en.wikipedia.org/wiki/Ronald_Fisher](https://en.wikipedia.org/wiki/Ronald_Fisher)
 - [https://www.famousscientists.org/ronald-fisher/](https://www.famousscientists.org/ronald-fisher/)
 - [https://www.britannica.com/biography/Ronald-Aylmer-Fisher](https://www.britannica.com/biography/Ronald-Aylmer-Fisher)
+
+Fishers's Iris data set
+
+- [https://en.wikipedia.org/wiki/Iris_flower_data_set](https://en.wikipedia.org/wiki/Iris_flower_data_set
+- [https://archive.ics.uci.edu/ml/datasets/iris](https://archive.ics.uci.edu/ml/datasets/iris)
