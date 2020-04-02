@@ -17,10 +17,17 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and geneticist, born in 1890 in London and died in 1962 in Adelaide, Australia. Described by Richard Dawkins as "the father of modern and experminetal design and the greatest of Dariwn's successors". Credited for numerous aspects of experimental design and modern statistica theory. 
 
+<img src="https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk" width="150px" />
+
 ![Ronald Fisher](https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk)
 
-**Intresting Facts**
+**Few Intresting Facts about R. Fisher**
 
+- Author of modern version of maximum likelihood method (MLE) between 1912 - 1922
+- became a statistician at Rothamsted Experimental Station in 1919 where by having access to biological data he invents the tool of modern experimental design
+- Creator of the F distribution and method of analysis of variance (ANOVA)
+- Writer of 7 books, which *Statistical Methods for Research Workers* and *The Design of Experiments* are considered to be most influential books on statistical methods of the 20th century's.
+- knighted by Queen Elizabeth in 1952, becoming Sir Ronald Aylmer Fisher.
 
 
 ## References 
