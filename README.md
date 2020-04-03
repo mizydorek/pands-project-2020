@@ -17,7 +17,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and geneticist, born in 1890 in London and died in 1962 in Adelaide, Australia. Described by Richard Dawkins as "the father of modern and experminetal design and the greatest of Dariwn's successors". Credited for numerous aspects of experimental design and modern statistical theory. 
 
-<img src="https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk" width="150px" />
+<img src="https://www.sciencehistory.org/sites/default/files/styles/rte_full_width/public/rte/fisher_as_young_man.jpg?itok=yGmWp2qk" width="200px" />
 
 **Few Intresting Facts about R. Fisher**
 
@@ -30,6 +30,8 @@ Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and g
 ## Fisher's Iris data set
 
 Introduced by Ronal Fisher in 1936 in his paper *The use of multiple measurements in taxonomic problems* the Iris flower data set is a multivariate data set which was used to developed a linear discriminant model. Consists of three species of Iris flower (Iris setosa, Iris virginica, Iris versicolor) and four attributes from each specie: the length and the width of the sepals and petals, in centimeters. 
+
+<img src="https://thegoodpython.com/assets/images/iris-species.png" width="80%"/>
 
 ### Content 
 
@@ -54,5 +56,5 @@ Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962)
 
 Fishers's Iris data set
 
-- [https://en.wikipedia.org/wiki/Iris_flower_data_set](https://en.wikipedia.org/wiki/Iris_flower_data_set
+- [https://en.wikipedia.org/wiki/Iris_flower_data_set](https://en.wikipedia.org/wiki/Iris_flower_data_set)
 - [https://archive.ics.uci.edu/ml/datasets/iris](https://archive.ics.uci.edu/ml/datasets/iris)
