@@ -8,7 +8,8 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 - [x] ~Introduction~
 - [x] ~Sir Ronald Fisher~
 - [x] ~Fisher's Iris data set~
-- [ ] 
+- [x] ~Iris dataset photo~
+- [x] ~Preview~
 
 ## Table of contents
 * [Introduction](#introduction)
@@ -31,13 +32,27 @@ Sir Ronald Aylmer Fisher was a British statistican, evolutionary biologist and g
 
 Introduced by Ronal Fisher in 1936 in his paper *The use of multiple measurements in taxonomic problems* the Iris flower data set is a multivariate data set which was used to developed a linear discriminant model. Consists of three species of Iris flower (Iris setosa, Iris virginica, Iris versicolor) and four attributes from each specie: the length and the width of the sepals and petals, in centimeters. 
 
-<img src="https://thegoodpython.com/assets/images/iris-species.png" width="80%"/>
+<img src="https://thegoodpython.com/assets/images/iris-species.png" width="100%"/>
 
 ### Content 
 
 The data set contains of 150 samples of three classes (species). Each class contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
 
 ### Preview of Data 
+
+#### Import data from csv file.
+
+```python
+import pandas as pd 
+
+data = data = pd.read_csv("iris.csv")
+```
+
+#### Preview of header
+
+```python
+data.head()
+```
 
 
 
