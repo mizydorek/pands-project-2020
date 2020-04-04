@@ -40,18 +40,36 @@ The data set contains of 150 samples of three classes (species). Each class cont
 
 ### Preview of Data 
 
-#### Import data from csv file.
+Import data from csv file.
 
 ```python
 import pandas as pd 
 
-data = data = pd.read_csv("iris.csv")
+data = pd.read_csv("iris.csv")
 ```
 
-#### Preview of header
+Preview of header
 
 ```python
 data.head()
+```
+
+
+
+```python
+data.info()
+```
+
+
+
+```python
+data.groupby('Species').size()
+```
+
+
+
+```python
+data.describe()
 ```
 
 

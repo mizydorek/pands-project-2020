@@ -7,6 +7,8 @@ with open("iris.data", 'r') as reader:
 '''
 data = pd.read_csv("iris.csv")
 
-print(data.head())
+#print(data.head())
 #print(data.describe())
 #print(data.info())
+#print(data.groupby('Species').size())
+print(data['Species'])
