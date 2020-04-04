@@ -54,25 +54,25 @@ Preview of header
 data.head()
 ```
 
-
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="100%" />
 
 ```python
 data.info()
 ```
 
-
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.info.png" width="100%" />
 
 ```python
 data.groupby('Species').size()
 ```
 
-
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.groupby.png" width="100%" />
 
 ```python
 data.describe()
 ```
 
-
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="100%" />
 
 ## References 
 
