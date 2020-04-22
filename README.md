@@ -34,19 +34,32 @@ Introduced by Ronal Fisher in 1936 in his paper *The use of multiple measurement
 
 <img src="https://thegoodpython.com/assets/images/iris-species.png" width="100%"/>
 
-### Content 
+### Preparations
 
-The data set contains of 150 samples of three classes (species). Each class contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
+Lets first import the necessary libraries
+
+```python
+import numpy as np 
+import matplotlib.pyplot as plt
+import pandas as pd
+import seaborn as sns
+```
+
+and data from csv file.
+
+```python
+data = pd.read_csv("iris.csv")
+```
 
 ### Preview of Data 
 
-Import data from csv file.
-
 ```python
-import pandas as pd 
-
-data = pd.read_csv("iris.csv")
+data.info()
 ```
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.info.png" width="60%" />
+
+Dataset contains the range index of 150 entries and 5 columns. There is non null values and data types are float64 and object. 
 
 Preview of header
 
@@ -56,25 +69,56 @@ data.head()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
 
-```python
-data.info()
-```
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.info.png" width="60%" />
+Explore more about species
 
 ```python
-data.groupby('Species').size()
+data.groupby('Species').size() 
+data.groupby('Species').count() 
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.groupby.png" width="60%" />
+
+Each specie (class) contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
+
+Lets take a look how data is distributed. 
 
 ```python
 data.describe()
 ```
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="60Ť%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="60%" />
 
+Preview of data grouped by species 
+```python
+species = data.groupby('Species')
+species['Sepal_length'].describe()
+```
 
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/spetal.length.png" width="60%" />
+
+Preview of data grouped by species 
+```python
+species['Sepal_width'].describe()
+```
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/spetal.width.png" width="60%" />
+
+Preview of data grouped by species 
+```python
+species = data.groupby('Species')
+species['Petal_length'].describe()
+```
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.length.png" width="60%" />
+
+Preview of data grouped by species 
+```python
+species['Petal_width'].describe()
+```
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.width.png" width="60%" />
+
+Visual representation of each Species
 
 ## References 
 
