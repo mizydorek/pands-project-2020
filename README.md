@@ -61,14 +61,6 @@ data.info()
 
 Dataset contains the range index of 150 entries and 5 columns. There is non null values and data types are float64 and object. 
 
-Preview of header
-
-```python
-data.head()
-```
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
-
 Explore more about species
 
 ```python
@@ -82,7 +74,15 @@ data.groupby('Species').count()
 
 Each specie (class) contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
 
-Lets take a look how data is distributed. 
+Preview of header
+
+```python
+data.head()
+```
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
+
+Lets take a look on summarize, dispersion and shape of dataset distribution
 
 ```python
 data.describe()
@@ -90,7 +90,9 @@ data.describe()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="60%" />
 
-Preview of data grouped by species 
+and now for every attribute of each specie.
+
+
 ```python
 species = data.groupby('Species')
 species['Sepal_length'].describe()
@@ -98,7 +100,7 @@ species['Sepal_length'].describe()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/spetal.length.png" width="60%" />
 
-Preview of data grouped by species 
+
 ```python
 species['Sepal_width'].describe()
 ```

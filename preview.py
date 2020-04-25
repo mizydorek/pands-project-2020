@@ -63,7 +63,10 @@ def main():
     ax.scatter(versicolor_length, versicolor_width, marker='o', c='g', s=10, alpha=0.6, label="Versicolor")
     ax.scatter(virginica_length, virginica_width, marker='o', c='b', s=10, alpha=0.6, label="Virginica")
     '''
-
+    sns.kdeplot(data['Sepal_width'], shade=True, color='r')
+    sns.kdeplot(data['Sepal_length'], shade=True, color='b')
+    sns.kdeplot(data['Petal_width'], shade=True, color='g')
+    sns.kdeplot(data['Petal_length'], shade=True, color='a')
 
     data_to_plot = [setosa_length, versicolor_length, virginica_length]
 
