@@ -2,11 +2,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
-'''
-with open("iris.data", 'r') as reader:
-    print(reader.read())
-'''
+
+# import iris data set
 data = pd.read_csv("iris.csv")
+
+# global variables
+colors = ('red', 'green', 'blue')
+Species = ('Setosa', 'Versicolor', 'Virginica')
+
 
 #print(data.head())
 #print(data.describe())
@@ -27,8 +30,17 @@ def displayMenu():
     choice = input('Enter a number: ')
     return choice
 
-colors = ('red', 'green', 'blue')
-Species = ('Setosa', 'Versicolor', 'Virginica')
+def infoMenu():
+    print('Info Menu:')
+    print('1. Info')
+    print('2. Describe')
+    print('3. Histogram')
+    print('4. Box charts')
+    print('5. Scatter charts')
+    print('6. Density charts')
+    print('7. Quit')
+    choice = input('Enter a number: ')
+    return choice
 
 def main():
     setosa_width = data[data['Species'] == 'Iris-setosa']['Sepal_width']
@@ -88,7 +100,7 @@ def main():
 choice = displayMenu()
 while choice != '7':
     if choice == '1':
-        info()
+        print(data.info())
     elif choice == '2':
         details()
     elif choice == '3':
@@ -101,6 +113,7 @@ while choice != '7':
         densityPlot()
     elif choice != '7':
         print('\nplease select one of the option')
+    print('\n')
     choice = displayMenu()
 
 

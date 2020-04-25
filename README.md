@@ -78,6 +78,8 @@ data.groupby('Species').count()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.groupby.png" width="60%" />
 
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/species.count.png" width="60%" />
+
 Each specie (class) contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
 
 Lets take a look how data is distributed. 
