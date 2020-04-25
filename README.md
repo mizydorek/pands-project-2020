@@ -9,10 +9,20 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 - [x] ~Sir Ronald Fisher~
 - [x] ~Fisher's Iris data set~
 - [x] ~Iris dataset photo~
-- [x] ~Preview~
+- [x] ~Preparation~
+- [x] ~Box plots~
+- [x] ~scatter plots~
+- [x] ~violin plots~
+- [x] ~density plots~
 
 ## Table of contents
 * [Introduction](#introduction)
+* [Sir Ronald Aylmer Fisher](#Sir Ronald Aylmer Fisher)
+* [Fisher's Iris data set](#Fisher's Iris data set)
+* [Preparations](#Preparations)
+* [Histogram](#Histogram)
+* [References](#References)
+
 
 ## Sir Ronald Aylmer Fisher (17 February 1890 – 29 July 1962) 
 
@@ -55,9 +65,12 @@ data = pd.read_csv("iris.csv")
 
 ```python
 data.info()
+data.shape()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.info.png" width="60%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.shape.png" width="60%" />
 
 Dataset contains the range index of 150 entries and 5 columns. There is non null values and data types are float64 and object. 
 
@@ -92,22 +105,19 @@ data.describe()
 
 and now for every attribute of each specie.
 
-
 ```python
 species = data.groupby('Species')
 species['Sepal_length'].describe()
 ```
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/spetal.length.png" width="60%" />
-
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/sepal.length.png" width="60%" />
 
 ```python
 species['Sepal_width'].describe()
 ```
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/spetal.width.png" width="60%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/sepal.width.png" width="60%" />
 
-Preview of data grouped by species 
 ```python
 species = data.groupby('Species')
 species['Petal_length'].describe()
@@ -115,12 +125,19 @@ species['Petal_length'].describe()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.length.png" width="60%" />
 
-Preview of data grouped by species 
 ```python
 species['Petal_width'].describe()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.width.png" width="60%" />
+
+### Histogram
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
 
 Visual representation of each Species
 
