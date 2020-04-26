@@ -26,10 +26,11 @@ def displayMenu():
     print('2. Species')
     print('3. Data')
     print('4. Histogram')
-    print('5. Box charts')
-    print('6. Scatter charts')
-    print('7. Density charts')
-    print('8. Quit')
+    print('5. Box plot')
+    print('6. Scatter plot')
+    print('7. Violin plot')
+    print('8. Pairplot plot')
+    print('9. Quit')
     choice = input('Enter a number: ')
     return choice
 
@@ -102,7 +103,7 @@ def main():
     '''
 
 choice = displayMenu()
-while choice != '7':
+while choice != '9':
     if choice == '1':
         info()
     elif choice == '2':
@@ -115,7 +116,11 @@ while choice != '7':
         scatterPlot()
     elif choice == '6':
         densityPlot()
-    elif choice != '7':
+    elif choice == '7':
+        violinPlot()
+    elif choice == '8':
+        pairPlot()
+    elif choice != '9':
         print('\nplease select one of the option')
     print('\n')
     choice = displayMenu()

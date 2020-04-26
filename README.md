@@ -18,6 +18,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 ## Table of contents
 * [Introduction](#introduction)
 * [Preparations](#Preparations)
+* [Data Visualization](#Data-Visualization)
 * [Histogram](#Histogram)
 * [References](#References)
 
@@ -59,7 +60,7 @@ and data from csv file.
 data = pd.read_csv("iris.csv")
 ```
 
-### Summary the Dataset
+### Dataset Summary
 
 Now it is time to take a look at the data. 
 
@@ -137,11 +138,33 @@ data[['Petal_width','Species']].groupby('Species').describe()
 
 ### Data Visualization
 
+Having a basic idea about the dataset now we can extend that with some vizualizations. This gives us much clearer idea of the distribution of input attributes. 
+
 #### Histogram 
 
-Presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species.
+Histogram presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species.
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
+
+#### Box plot 
+
+By using box plots we can detect and identify outliers. Outlier is a point or set of points that are different from others. They can be on both end sides (low and high). Shown below are the box plots of all attributes across all species. 
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.length.png" width="50%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.width.png" width="50%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
+
+#### Scatter plot 
+
+We often use scatter plots to find some correlation between variables. The scatter plots below are plotted accordingly to see relationship between attributes. 
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.sepal.png" width="100%" />
 
 ## References 
 
