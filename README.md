@@ -135,9 +135,13 @@ data[['Petal_width','Species']].groupby('Species').describe()
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.width.png" width="60%" />
 
-### Histogram
+### Data Visualization
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> | <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> | <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
+#### Histogram 
+
+Presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species.
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
 
 ## References 
 
