@@ -17,8 +17,6 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 ## Table of contents
 * [Introduction](#introduction)
-* [Sir Ronald Aylmer Fisher](#Sir Ronald Aylmer Fisher)
-* [Fisher's Iris data set](#Fisher's Iris data set)
 * [Preparations](#Preparations)
 * [Histogram](#Histogram)
 * [References](#References)
@@ -61,18 +59,32 @@ and data from csv file.
 data = pd.read_csv("iris.csv")
 ```
 
-### Preview of Data 
+### Summary the Dataset
+
+Now it is time to take a look at the data. 
+
+Firstly, we can print basic information and dimension of the dataset.
 
 ```python
 data.info()
-data.shape()
+data.shape
 ```
+
+Dataset contains the range index of 150 entries and 5 columns. There is non null values and data types are float64 and object. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.info.png" width="60%" />
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.shape.png" width="60%" />
 
-Dataset contains the range index of 150 entries and 5 columns. There is non null values and data types are float64 and object. 
+Sample of data
+
+```python
+data.head()
+```
+
+By default output shows first five rows.
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
 
 Explore more about species
 
@@ -81,65 +93,51 @@ data.groupby('Species').size()
 data.groupby('Species').count() 
 ```
 
+Each specie (class) contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
+
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.groupby.png" width="60%" />
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/species.count.png" width="60%" />
 
-Each specie (class) contains 50 samples with 4 attributes (sepal length, sepal width, petal length, petal width). 
-
-Preview of header
-
-```python
-data.head()
-```
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
-
-Lets take a look on summarize, dispersion and shape of dataset distribution
+Lets take a look on summarize, dispersion and shape of dataset distribution.
 
 ```python
 data.describe()
 ```
 
+All attributes are in centimeters and range between 0 and 8.
+
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="60%" />
 
-and now for every attribute of each specie.
+Now more deep in details grouped by species.
 
 ```python
-species = data.groupby('Species')
-species['Sepal_length'].describe()
+data[['Sepal_length','Species']].groupby('Species').describe()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/sepal.length.png" width="60%" />
 
 ```python
-species['Sepal_width'].describe()
+data[['Sepal_width','Species']].groupby('Species').describe()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/sepal.width.png" width="60%" />
 
 ```python
-species = data.groupby('Species')
-species['Petal_length'].describe()
+data[['Petal_length','Species']].groupby('Species').describe()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.length.png" width="60%" />
 
 ```python
-species['Petal_width'].describe()
+data[['Petal_width','Species']].groupby('Species').describe()
 ```
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/petal.width.png" width="60%" />
 
 ### Histogram
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" />
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" />
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
-
-Visual representation of each Species
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> | <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> | <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
 
 ## References 
 
