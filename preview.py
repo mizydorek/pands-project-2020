@@ -7,8 +7,10 @@ import seaborn as sns
 data = pd.read_csv("iris.csv")
 
 # global variables
+filename = 'info.txt'
 colors = ('red', 'green', 'blue')
 Species = ('Setosa', 'Versicolor', 'Virginica')
+
 
 
 #print(data.head())
@@ -21,26 +23,25 @@ Species = ('Setosa', 'Versicolor', 'Virginica')
 def displayMenu():
     print('Main Menu:')
     print('1. Info')
-    print('2. Details')
-    print('3. Histogram')
-    print('4. Box charts')
-    print('5. Scatter charts')
-    print('6. Density charts')
-    print('7. Quit')
+    print('2. Species')
+    print('3. Data')
+    print('4. Histogram')
+    print('5. Box charts')
+    print('6. Scatter charts')
+    print('7. Density charts')
+    print('8. Quit')
     choice = input('Enter a number: ')
     return choice
 
-def infoMenu():
-    print('Info Menu:')
-    print('1. Info')
-    print('2. Describe')
-    print('3. Histogram')
-    print('4. Box charts')
-    print('5. Scatter charts')
-    print('6. Density charts')
-    print('7. Quit')
-    choice = input('Enter a number: ')
-    return choice
+def saveToFile():
+    with open(filename) as writer:
+        writer 
+
+def info():
+    toPrint = ('\n--- INFO ---',data.info(), '\n--- SHAPE ---\n',data.shape)
+    print(toPrint)
+
+
 
 def main():
     setosa_width = data[data['Species'] == 'Iris-setosa']['Sepal_width']
@@ -103,7 +104,7 @@ def main():
 choice = displayMenu()
 while choice != '7':
     if choice == '1':
-        print(data.info())
+        info()
     elif choice == '2':
         details()
     elif choice == '3':
