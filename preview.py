@@ -1,3 +1,10 @@
+# Maciej Izydorek 
+# GMIT G00387873
+# PANDS PROJECT 2020
+# Fisher's Iris dataset
+# Script Analyse dataset and output information about species
+
+# neccessary libraries 
 import numpy as np 
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -24,7 +31,7 @@ def displayMenu():
     print('Main Menu:')
     print('1. Info')
     print('2. Species')
-    print('3. Data')
+    print('3. Details')
     print('4. Histogram')
     print('5. Box plot')
     print('6. Scatter plot')
@@ -39,8 +46,22 @@ def saveToFile():
         writer 
 
 def info():
-    toPrint = ('\n--- INFO ---',data.info(), '\n--- SHAPE ---\n',data.shape)
-    print(toPrint)
+    print(data.info(), '\nShape: ', data.shape)
+
+def species():
+    print(data.groupby('Species').size())
+    print(data.groupby('Species').count()) 
+
+def details():
+    print(data.describe())
+    print(data[['Sepal_length','Species']].groupby('Species').describe())
+    print(data[['Sepal_width','Species']].groupby('Species').describe())
+    print(data[['Petal_length','Species']].groupby('Species').describe())
+    print(data[['Petal_width','Species']].groupby('Species').describe())
+
+def histogram():
+    
+   
 
 
 
@@ -107,15 +128,15 @@ while choice != '9':
     if choice == '1':
         info()
     elif choice == '2':
-        details()
+        species()
     elif choice == '3':
-        histogram()
+        details()
     elif choice == '4':
-        boxPlot()
+        histogram()
     elif choice == '5':
-        scatterPlot()
+        boxPlot()
     elif choice == '6':
-        densityPlot()
+        scatterPlot()
     elif choice == '7':
         violinPlot()
     elif choice == '8':
