@@ -1,8 +1,7 @@
 # Maciej Izydorek 
 # GMIT G00387873
-# PANDS PROJECT 2020
 # Fisher's Iris dataset
-# Script Analyse dataset and output information about species
+# A script to analyse Iris dataset and output information about species
 
 # neccessary libraries 
 import numpy as np 
@@ -17,14 +16,6 @@ data = pd.read_csv("iris.csv")
 filename = 'info.txt'
 colors = ('red', 'green', 'blue')
 Species = ('Setosa', 'Versicolor', 'Virginica')
-
-
-
-#print(data.head())
-#print(data.describe())
-#print(data.info())
-#print(data.groupby('Species').size())
-#print(data['Species'])
 
 # main menu
 def displayMenu():
@@ -41,18 +32,17 @@ def displayMenu():
     choice = input('Enter a number: ')
     return choice
 
-def saveToFile():
-    with open(filename) as writer:
-        writer 
-
 def info():
+    # basic info shape of dataset
     print(data.info(), '\nShape: ', data.shape)
 
 def species():
+    # Size and count of each species 
     print(data.groupby('Species').size())
     print(data.groupby('Species').count()) 
 
 def details():
+    # Dataset summary and attribute summary for each species. 
     print(data.describe())
     print(data[['Sepal_length','Species']].groupby('Species').describe())
     print(data[['Sepal_width','Species']].groupby('Species').describe())

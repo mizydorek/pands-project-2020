@@ -5,6 +5,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 ### To do list 
 - [x] ~Readme markdown~
+- [x] ~Reasearch about Ronald Fisher and his Iris dataset~
 - [x] ~Introduction~
 - [x] ~Sir Ronald Fisher~
 - [x] ~Fisher's Iris data set~
@@ -13,7 +14,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 - [x] ~Box plots~
 - [x] ~scatter plots~
 - [x] ~violin plots~
-- [x] ~density plots~
+- [x] ~Pair plots~
 
 ## Table of contents
 * [Introduction](#introduction)
@@ -64,7 +65,7 @@ data = pd.read_csv("iris.csv")
 
 Now it is time to take a look at the data. 
 
-Firstly, we can print basic information and dimension of the dataset.
+Firstly, we can print basic information and dimension of the data.
 
 ```python
 data.info()
@@ -77,13 +78,13 @@ Dataset contains the range index of 150 entries and 5 columns. There is non null
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.shape.png" width="60%" />
 
-Sample of data
+Preview of data
 
 ```python
 data.head()
 ```
 
-By default output shows first five rows.
+Function returns first n rows of dataset. By default shows first five rows.
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.head.png" width="60%" />
 
@@ -105,12 +106,12 @@ Lets take a look on summarize, dispersion and shape of dataset distribution.
 ```python
 data.describe()
 ```
-
+It shows min, max, mean, std and quantile values. 
 All attributes are in centimeters and range between 0 and 8.
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/data.describe.png" width="60%" />
 
-Now more deep in details grouped by species.
+Going further deep in details we can display every attribute according to each species by grouping them separately.
 
 ```python
 data[['Sepal_length','Species']].groupby('Species').describe()
