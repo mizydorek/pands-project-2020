@@ -15,7 +15,8 @@ data = pd.read_csv("iris.csv")
 # global variables
 filename = 'info.txt'
 colors = ('red', 'green', 'blue')
-Species = ('Setosa', 'Versicolor', 'Virginica')
+species = ('Setosa', 'Versicolor', 'Virginica')
+setosa = data[data['Species'] == 'Iris-setosa']
 
 # main menu
 def displayMenu():
@@ -44,6 +45,8 @@ def species():
 def details():
     # Dataset summary and attribute summary for each species. 
     print(data.describe())
+    # save summary to txt file
+    data.describe().to_csv("summary.txt", sep=',')
     print(data[['Sepal_length','Species']].groupby('Species').describe())
     print(data[['Sepal_width','Species']].groupby('Species').describe())
     print(data[['Petal_length','Species']].groupby('Species').describe())
@@ -51,8 +54,23 @@ def details():
 
 def histogram():
     
-   
+    data.groupby('Species').hist()
 
+    fig, ax = plt.subplots(1,3, figsize=(18, 9))
+
+    setosa.plot(kind='hist', ax=color='orange', grid=True)
+
+    plt.show()
+
+def boxPlot():
+
+    ax.set_title('Sepal length')
+    df = ax.boxplot(data_to_plot, patch_artist=True)
+    #ax.violinplot(data_to_plot)
+    ax.yaxis.grid(True)
+    ax.set_ylabel('cm')
+    plt.setp(ax, xticks=[y+1 for y in range(len(data_to_plot))],
+        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
 
 
 def main():
@@ -60,7 +78,7 @@ def main():
     setosa_length = data[data['Species'] == 'Iris-setosa']['Sepal_length']
     virginica_width = data[data['Species'] == 'Iris-virginica']['Sepal_width']
     virginica_length = data[data['Species'] == 'Iris-virginica']['Sepal_length']
-    versicolor_width = data[data['Species'] == 'Iris-versicolor']['Sepal_width']
+    versicolor_with = data[data['Species'] == 'Iris-versicolor']['Sepal_width']
     versicolor_length = data[data['Species'] == 'Iris-versicolor']['Sepal_length']
 
     c = data.corr()

@@ -139,11 +139,11 @@ data[['Petal_width','Species']].groupby('Species').describe()
 
 ### Data Visualization
 
-Having a basic idea about the dataset now we can extend that with some vizualizations. This gives us much clearer idea of the distribution of input attributes. 
+Having a basic idea about the dataset now we can extend that with some vizualizations. This will give us much clearer idea of the distribution of input attributes. 
 
 #### Histogram 
 
-Histogram presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species.
+Histogram presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
 
@@ -151,13 +151,11 @@ Histogram presentation of all attributes (both petal and sepal width and length)
 
 By using box plots we can detect and identify outliers. Outlier is a point or set of points that are different from others. They can be on both end sides (low and high). Shown below are the box plots of all attributes across all species. 
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.length.png" width="50%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.width.png" width="50%" />
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.width.png" width="50%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" />
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
+It can be seen that there are very few of outliers and it  will not have an impact on our analysis. We can clearly noticed that there is distinct difference in distributions for both Petal width and length across species. Setosa’s petal length and width makes setosa differing from other species. Sepal width seems to be the most similar across all of them. 
 
 #### Scatter plot 
 
@@ -184,3 +182,14 @@ Fishers's Iris data set
 
 - [https://en.wikipedia.org/wiki/Iris_flower_data_set](https://en.wikipedia.org/wiki/Iris_flower_data_set)
 - [https://archive.ics.uci.edu/ml/datasets/iris](https://archive.ics.uci.edu/ml/datasets/iris)
+
+Pandas
+
+- [https://realpython.com/pandas-dataframe/](https://realpython.com/pandas-dataframe/)
+
+- [https://realpython.com/pandas-python-explore-dataset/](https://realpython.com/pandas-python-explore-dataset/)
+
+- [https://backtobazics.com/python/pandas-describe-method-dataframe-summary/](https://backtobazics.com/python/pandas-describe-method-dataframe-summary/)
+
+Histogram
+- [https://realpython.com/python-histograms/](https://realpython.com/python-histograms/)
