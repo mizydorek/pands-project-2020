@@ -159,7 +159,7 @@ It can be seen that there are very few of outliers and it  will not have an impa
 
 #### Scatter plot 
 
-
+We often use scatter plots to find some correlation between variables. The scatter plots below are plotted accordingly to see relationship between attributes. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
 
