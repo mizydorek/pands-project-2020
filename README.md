@@ -159,11 +159,15 @@ It can be seen that there are very few of outliers and it  will not have an impa
 
 #### Scatter plot 
 
-We often use scatter plots to find some correlation between variables. The scatter plots below are plotted accordingly to see relationship between attributes. 
+
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.sepal.png" width="100%" />
+
+#### Violin plot 
+
+Used to observe the distribution of dattaset and especially useful when you want to make a comparison of distribution between multiple groups. 
 
 ## References 
 

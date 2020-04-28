@@ -13,10 +13,12 @@ import seaborn as sns
 data = pd.read_csv("iris.csv")
 
 # global variables
-filename = 'info.txt'
 colors = ('red', 'green', 'blue')
 species = ('Setosa', 'Versicolor', 'Virginica')
 setosa = data[data['Species'] == 'Iris-setosa']
+versicolor = data[data['Species'] == 'Iris-versicolor']
+virginica = data[data['Species'] == 'Iris-virginica']
+attr = ['Sepal_length','Sepal_width','Petal_length','Petal_width']
 
 # main menu
 def displayMenu():
@@ -55,22 +57,91 @@ def details():
 def histogram():
     
     data.groupby('Species').hist()
-
-    fig, ax = plt.subplots(1,3, figsize=(18, 9))
-
-    setosa.plot(kind='hist', ax=color='orange', grid=True)
-
     plt.show()
+    plt.close()
 
 def boxPlot():
 
-    ax.set_title('Sepal length')
-    df = ax.boxplot(data_to_plot, patch_artist=True)
-    #ax.violinplot(data_to_plot)
-    ax.yaxis.grid(True)
-    ax.set_ylabel('cm')
-    plt.setp(ax, xticks=[y+1 for y in range(len(data_to_plot))],
-        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
+    # boxplot using sepal width across all species 
+    sns.boxplot(x="Species", y="Sepal_width", data=data)
+    # plot settings 
+    plt.title('Sepal width')
+    plt.xlabel('')
+    plt.ylabel('Sepal width (cm)')
+    # save to file 
+    plt.savefig('plots/boxplot_sepal_width.jpg')
+    plt.show()
+    # clean up
+    plt.close()
+ 
+    # boxplot using sepal length across all species 
+    sns.boxplot(x="Species", y="Sepal_length", data=data)
+    # plot settings 
+    plt.title('Sepal length')
+    plt.xlabel('')
+    plt.ylabel('Sepal length (cm)')
+    plt.savefig('plots/boxplot_sepal_length.jpg')
+    plt.show()
+    # clean up
+    plt.close()
+
+    # boxplot using petal width across all species 
+    sns.boxplot(x="Species", y="Petal_width", data=data)
+    # plot settings 
+    plt.title('Petal width')
+    plt.xlabel('')
+    plt.ylabel('Petal width (cm)')
+    plt.savefig('plots/boxplot_petal_width.jpg')
+    plt.show()
+    # clean up
+    plt.close()
+
+    # distribution of petal length 
+    # boxplot using petal length across all species 
+    sns.boxplot(x="Species", y="Petal_length", data=data)
+    # plot settings 
+    plt.title('Petal length')
+    plt.xlabel('')
+    plt.ylabel('Petal length (cm)')
+    plt.savefig('plots/boxplot_petal_length.jpg')
+    plt.show()
+    # clean up
+    plt.close()
+
+def scatterPlot():
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    # scatterplot of sepal across all species 
+    ax.scatter(setosa['Sepal_length'], setosa['Sepal_width'], marker='o', c='r', s=10, alpha=0.6, label="Setosa")
+    ax.scatter(versicolor['Sepal_length'], versicolor['Sepal_width'], marker='o', c='g', s=10, alpha=0.6, label="Versicolor")
+    ax.scatter(virginica['Sepal_length'], virginica['Sepal_width'], marker='o', c='b', s=10, alpha=0.6, label="Virginica")
+    # Scatter plot settings
+    ax.set_title('Sepal width vs length')
+    ax.legend(loc='upper left')
+    ax.set_xlabel('length(cm)')
+    ax.set_ylabel('width(cm)')
+    # save to file 
+    plt.savefig('plots/scatterplot_sepal.jpg')
+    plt.show()
+    plt.close()
+
+    fig, ax = plt.subplots(figsize=(12, 6))
+    # scatterplot of sepal across all species 
+    ax.scatter(setosa['Petal_length'], setosa['Petal_width'], marker='o', c='r', s=10, alpha=0.6, label="Setosa")
+    ax.scatter(versicolor['Petal_length'], versicolor['Petal_width'], marker='o', c='g', s=10, alpha=0.6, label="Versicolor")
+    ax.scatter(virginica['Petal_length'], virginica['Petal_width'], marker='o', c='b', s=10, alpha=0.6, label="Virginica")
+    # Scatter plot settings
+    ax.set_title('Petal width vs length')
+    ax.legend(loc='upper left')
+    ax.set_xlabel('length(cm)')
+    ax.set_ylabel('width(cm)')
+    # save to file 
+    plt.savefig('plots/scatterplot_petal.jpg')
+    plt.show()
+    plt.close()
+
+def violinPlot():
+
 
 
 def main():
