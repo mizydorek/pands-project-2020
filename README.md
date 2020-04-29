@@ -177,6 +177,11 @@ The violin plots clearly show that based on petal length and width setosa's shap
 
 #### Pair plot 
 
+Pair plots are a really good way to visualize pairwise bivariate distributions between each variable in a dataset. Pair plot produces a matrix of relationship between each variable and displays graphical representation of all the possible variable combinations of our dataset.
+
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/pairplot_iris.png" width="100%" />
+
+
 ## References 
 
 README markdown:

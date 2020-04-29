@@ -177,21 +177,20 @@ def violinPlot():
     # clean up
     plt.close()
 
+def pairPlot():
+    
+    # pairplot for whole dataset 
+    sns.pairplot(data, hue='Species', markers="o", 
+        plot_kws= {'alpha': 0.8, 's': 14})
+
+    # save to file 
+    plt.savefig('plots/pairplot_iris.png')
+    plt.show()
+    # clean up
+    plt.close()
+    
 def main():
-    setosa_width = data[data['Species'] == 'Iris-setosa']['Sepal_width']
-    setosa_length = data[data['Species'] == 'Iris-setosa']['Sepal_length']
-    virginica_width = data[data['Species'] == 'Iris-virginica']['Sepal_width']
-    virginica_length = data[data['Species'] == 'Iris-virginica']['Sepal_length']
-    versicolor_with = data[data['Species'] == 'Iris-versicolor']['Sepal_width']
-    versicolor_length = data[data['Species'] == 'Iris-versicolor']['Sepal_length']
-
-    c = data.corr()
-
-    iris = data[['Sepal_width','Sepal_length']]  
-    sns.heatmap(iris)
-
-    fig, ax = plt.subplots(figsize=(6, 6))
-
+   
     '''
     # Draw scatter plots to check distribution across all species according to Petal and Sepal
     ax.scatter(setosa_length, setosa_width, marker='o', c='r', s=10, alpha=0.6, label="Setosa")
@@ -203,36 +202,9 @@ def main():
     sns.kdeplot(data['Petal_width'], shade=True, color='g')
     sns.kdeplot(data['Petal_length'], shade=True, color='a')
 
-    data_to_plot = [setosa_length, versicolor_length, virginica_length]
-
-   
-
-
-    '''
-    sns.distplot(data_to_plot, hist = False, kde = True,
-                 kde_kws = {'shade': True, 'linewidth': 3}, 
-                  label = Species)
-    '''
-    '''
-    ax.set_title('Sepal length')
-    df = ax.boxplot(data_to_plot, patch_artist=True)
-    #ax.violinplot(data_to_plot)
-    ax.yaxis.grid(True)
-    ax.set_ylabel('cm')
-    plt.setp(ax, xticks=[y+1 for y in range(len(data_to_plot))],
-        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
-
-    '''
     '''
     for patch, color in zip(df['boxes'], colors):
         patch.set_facecolor(color)
-    '''
-    '''
-    # Scatter plot settings
-    ax.set_title('Petal width vs length')
-    ax.legend(loc='upper left')
-    ax.set_xlabel('length(cm)')
-    ax.set_ylabel('width(cm)')
     '''
 
 choice = displayMenu()
@@ -257,9 +229,3 @@ while choice != '9':
         print('\nplease select one of the option')
     print('\n')
     choice = displayMenu()
-
-
-'''   
-main()
-plt.show()
-'''
