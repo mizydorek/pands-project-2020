@@ -142,24 +142,37 @@ def scatterPlot():
 
 def violinPlot():
 
-    fig, ax = plt.subplots(1,2, figsize=(14, 6))
+    fig, axes = plt.subplots(2,2, figsize=(12, 8))
 
-    # violin plot using petal length and width across all species 
-    sns.violinplot(x="Species", y="Petal_width", data=data,ax=ax[0])
-    sns.violinplot(x="Species", y="Petal_length", data=data, ax=ax[1])
+    # boxplot using sepal width across all species 
+    sns.violinplot(x="Species", y="Petal_width", data=data,ax=axes[0,0])
+    sns.violinplot(x="Species", y="Petal_length", data=data, ax=axes[0,1])
+    sns.violinplot(x="Species", y="Sepal_width", data=data,ax=axes[1,0])
+    sns.violinplot(x="Species", y="Sepal_length", data=data, ax=axes[1,1])
+
     # plot settings 
-    plt.setp(ax[0], 
+    plt.setp(axes[0, 0], 
         xlabel='',
         ylabel='Petal width (cm)', 
         title='Petal width', 
         xticklabels=['Setosa', 'Versicolor', 'Virginica'])
-    plt.setp(ax[1], 
+    plt.setp(axes[0, 1], 
         xlabel='',
         ylabel='Petal length (cm)', 
         title='Petal length', 
         xticklabels=['Setosa', 'Versicolor', 'Virginica'])
+    plt.setp(axes[1, 0], 
+        xlabel='',
+        ylabel='Sepal width (cm)', 
+        title='Sepal width', 
+        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
+    plt.setp(axes[1, 1], 
+        xlabel='',
+        ylabel='Sepal length (cm)', 
+        title='Sepal length', 
+        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
     # save to file 
-    plt.savefig('plots/violinplot_petal.png')
+    plt.savefig('plots/violinplot_iris.png')
     plt.show()
     # clean up
     plt.close()

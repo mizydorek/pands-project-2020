@@ -173,6 +173,10 @@ Examining the petal length vs width we can observe linear regression across all 
 
 Belongs to categorial plots and is also necessary in data exploration step, as can be used to observe how different classes of variable are distributed in dataset.
 
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/violinplot_iris.png" width="100%" />
+
+The violin plots clearly show that based on petal length and width setosa's shape is completly different from other two species. Versicolor and virginica have considerably longer petal than setosa. We can distinguish significant dissimilarity between Setosa's petal and sepal. The differentiation is smaller in species versicolor and virginica. We can also observed that virginica has the highest median in sepal length, petal length and width while sepal width is the most similar across all species and highly concentrated around the median.
+
 ## References 
 
 README markdown:
