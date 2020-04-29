@@ -69,7 +69,7 @@ def boxPlot():
     plt.xlabel('')
     plt.ylabel('Sepal width (cm)')
     # save to file 
-    plt.savefig('plots/boxplot_sepal_width.jpg')
+    plt.savefig('plots/boxplot_sepal_width.png')
     plt.show()
     # clean up
     plt.close()
@@ -80,7 +80,7 @@ def boxPlot():
     plt.title('Sepal length')
     plt.xlabel('')
     plt.ylabel('Sepal length (cm)')
-    plt.savefig('plots/boxplot_sepal_length.jpg')
+    plt.savefig('plots/boxplot_sepal_length.png')
     plt.show()
     # clean up
     plt.close()
@@ -91,7 +91,7 @@ def boxPlot():
     plt.title('Petal width')
     plt.xlabel('')
     plt.ylabel('Petal width (cm)')
-    plt.savefig('plots/boxplot_petal_width.jpg')
+    plt.savefig('plots/boxplot_petal_width.png')
     plt.show()
     # clean up
     plt.close()
@@ -103,7 +103,7 @@ def boxPlot():
     plt.title('Petal length')
     plt.xlabel('')
     plt.ylabel('Petal length (cm)')
-    plt.savefig('plots/boxplot_petal_length.jpg')
+    plt.savefig('plots/boxplot_petal_length.png')
     plt.show()
     # clean up
     plt.close()
@@ -121,7 +121,7 @@ def scatterPlot():
     ax.set_xlabel('length(cm)')
     ax.set_ylabel('width(cm)')
     # save to file 
-    plt.savefig('plots/scatterplot_sepal.jpg')
+    plt.savefig('plots/scatterplot_sepal.png')
     plt.show()
     plt.close()
 
@@ -136,13 +136,33 @@ def scatterPlot():
     ax.set_xlabel('length(cm)')
     ax.set_ylabel('width(cm)')
     # save to file 
-    plt.savefig('plots/scatterplot_petal.jpg')
+    plt.savefig('plots/scatterplot_petal.png')
     plt.show()
     plt.close()
 
 def violinPlot():
 
+    fig, ax = plt.subplots(1,2, figsize=(14, 6))
 
+    # violin plot using petal length and width across all species 
+    sns.violinplot(x="Species", y="Petal_width", data=data,ax=ax[0])
+    sns.violinplot(x="Species", y="Petal_length", data=data, ax=ax[1])
+    # plot settings 
+    plt.setp(ax[0], 
+        xlabel='',
+        ylabel='Petal width (cm)', 
+        title='Petal width', 
+        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
+    plt.setp(ax[1], 
+        xlabel='',
+        ylabel='Petal length (cm)', 
+        title='Petal length', 
+        xticklabels=['Setosa', 'Versicolor', 'Virginica'])
+    # save to file 
+    plt.savefig('plots/violinplot_petal.png')
+    plt.show()
+    # clean up
+    plt.close()
 
 def main():
     setosa_width = data[data['Species'] == 'Iris-setosa']['Sepal_width']

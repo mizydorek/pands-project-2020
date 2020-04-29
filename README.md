@@ -153,21 +153,25 @@ By using box plots we can detect and identify outliers. Outlier is a point or se
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.width.png" width="50%" />
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
 
 It can be seen that there are very few of outliers and it  will not have an impact on our analysis. We can clearly noticed that there is distinct difference in distributions for both Petal width and length across species. Setosa’s petal length and width makes setosa differing from other species. Sepal width seems to be the most similar across all of them. 
 
 #### Scatter plot 
 
-We often use scatter plots to find some correlation between variables. The scatter plots below are plotted accordingly to see relationship between attributes. 
-
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
+Also known as Relational plots. We often use scatter plots to find some correlation between variables. The correlation can help us understand our data more and see relationship between attributes. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.sepal.png" width="100%" />
 
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
+
+In terms of sepal length vs width setosa appears to be  the only specie that differs in distinctive way from the others. Versicolor and virginica are a little more varied and overlapping together. 
+
+Examining the petal length vs width we can observe linear regression across all the species. The plot also shows that this a good way to differentiate between species where setosa again differs the most from other species. 
+
 #### Violin plot 
 
-Used to observe the distribution of dattaset and especially useful when you want to make a comparison of distribution between multiple groups. 
+Belongs to categorial plots and is also necessary in data exploration step, as can be used to observe how different classes of variable are distributed in dataset.
 
 ## References 
 
