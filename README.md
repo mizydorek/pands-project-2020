@@ -151,9 +151,9 @@ Histogram presentation of all attributes (both petal and sepal width and length)
 
 By using box plots we can detect and identify outliers. Outlier is a point or set of points that are different from others. They can be on both end sides (low and high). Shown below are the box plots of all attributes across all species. 
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.petal.width.png" width="50%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_petal_length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_petal_width.png" width="50%" />
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/boxplot.sepal.width.png" width="50%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_sepal_length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_sepal_width.png" width="50%" />
 
 It can be seen that there are very few of outliers and it  will not have an impact on our analysis. We can clearly noticed that there is distinct difference in distributions for both Petal width and length across species. Setosa’s petal length and width makes setosa differing from other species. Sepal width seems to be the most similar across all of them. 
 
@@ -161,13 +161,11 @@ It can be seen that there are very few of outliers and it  will not have an impa
 
 Also known as Relational plots. We often use scatter plots to find some correlation between variables. The correlation can help us understand our data more and see relationship between attributes. 
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.sepal.png" width="100%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/scatterplot_sepal.png" width="100%" />
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/scatter.petal.png" width="100%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/scatterplot_petal.png" width="100%" />
 
-In terms of sepal length vs width setosa appears to be  the only specie that differs in distinctive way from the others. Versicolor and virginica are a little more varied and overlapping together. 
-
-Examining the petal length vs width we can observe linear regression across all the species. The plot also shows that this a good way to differentiate between species where setosa again differs the most from other species. 
+In terms of sepal length vs width setosa appears to be  the only specie that differs in distinctive way from the others. Versicolor and virginica are a little more varied and overlapping together. Examining the petal length vs width we can observe linear regression across all the species. The plot also shows that this a good way to differentiate between species where setosa again differs the most from other species. 
 
 #### Violin plot 
 
@@ -176,6 +174,8 @@ Belongs to categorial plots and is also necessary in data exploration step, as c
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/violinplot_iris.png" width="100%" />
 
 The violin plots clearly show that based on petal length and width setosa's shape is completly different from other two species. Versicolor and virginica have considerably longer petal than setosa. We can distinguish significant dissimilarity between Setosa's petal and sepal. The differentiation is smaller in species versicolor and virginica. We can also observed that virginica has the highest median in sepal length, petal length and width while sepal width is the most similar across all species and highly concentrated around the median.
+
+#### Pair plot 
 
 ## References 
 
