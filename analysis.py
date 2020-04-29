@@ -14,7 +14,8 @@ attr = ('Sepal_length','Sepal_width','Petal_length','Petal_width')
 
 
 
-colors = ['red', 'tan', 'lime']
+
+
 
 data.hist(bins=15,
                  color='steelblue',
@@ -32,6 +33,7 @@ plt.show()
 # clean up
 plt.close()
 '''
+'''
 #fig, axes = plt.subplots(2,2, figsize=(12, 8))
 '''
 
@@ -46,10 +48,10 @@ plt.show()
 # clean up
 plt.close()
 '''
- '''
+'''
     for patch, color in zip(df['boxes'], colors):
         patch.set_facecolor(color)
-    '''
+'''
 
 '''
 ax.set_title('Sepal length')

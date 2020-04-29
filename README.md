@@ -139,7 +139,7 @@ data[['Petal_width','Species']].groupby('Species').describe()
 
 ### Data Visualization
 
-Having a basic idea about the dataset now we can extend that with some vizualizations. This will give us much clearer idea of the distribution of input attributes. 
+Data visualization is the discipline of trying to understand data by placing it in a visual context so that trends and correlations that might not otherwise be detected can be exposed. This will give us much clearer idea of the distribution of input dataset.
 
 #### Histogram 
 
@@ -169,11 +169,11 @@ In terms of sepal length vs width setosa appears to be  the only specie that dif
 
 #### Violin plot 
 
-Belongs to categorial plots and is also necessary in data exploration step, as can be used to observe how different classes of variable are distributed in dataset.
+As a categorial plot, violin plot represent distributions of variables for one or more class in dataset using density curves. The width of each curve corresponds with the estimated frequency of data points in each zone. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/violinplot_iris.png" width="100%" />
 
-The violin plots clearly show that based on petal length and width setosa's shape is completly different from other two species. Versicolor and virginica have considerably longer petal than setosa. We can distinguish significant dissimilarity between Setosa's petal and sepal. The differentiation is smaller in species versicolor and virginica. We can also observed that virginica has the highest median in sepal length, petal length and width while sepal width is the most similar across all species and highly concentrated around the median.
+The violin plots clearly show that based on petal length and width setosa's shape is completly different from other two species. The wider part denotes that there is higher density whereas the thinner part corresponds less density. Versicolor and virginica have considerably longer petal than setosa. We can distinguish significant dissimilarity between Setosa's petal and sepal. The differentiation is smaller in species versicolor and virginica. We can also observed that virginica has the highest median in sepal length, petal length and width while sepal width is the most similar across all species and highly concentrated around the median.
 
 #### Pair plot 
 
@@ -211,3 +211,11 @@ Pandas
 
 Histogram
 - [https://realpython.com/python-histograms/](https://realpython.com/python-histograms/)
+
+Plots 
+- [https://chartio.com/learn/charts/](https://chartio.com/learn/charts/)
+
+Multiple Subplots
+- [https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html](https://jakevdp.github.io/PythonDataScienceHandbook/04.08-multiple-subplots.html)
+
+
