@@ -181,6 +181,7 @@ Pair plots are a really good way to visualize pairwise bivariate distributions b
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/pairplot_iris.png" width="100%" />
 
+This gives us a great overview and allows us to easily identify relationship between pairwises of attribute of the species. Plot clearly shows that setosa is the most separable and distinctly different from the other two species while there is small overlap in the pairwise relationships of versicolor and virginica species. The density plots espesially petal ones on the diagonal make it easy to compare distributions between the species.
 
 ## References 
 

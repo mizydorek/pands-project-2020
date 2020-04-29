@@ -11,31 +11,45 @@ setosa = data[data['Species'] == 'Iris-setosa']
 versicolor = data[data['Species'] == 'Iris-versicolor']
 virginica = data[data['Species'] == 'Iris-virginica']
 attr = ('Sepal_length','Sepal_width','Petal_length','Petal_width')
-'''
+
+
+
+colors = ['red', 'tan', 'lime']
+
 data.hist(bins=15,
                  color='steelblue',
                  edgecolor='black', linewidth=1.0,
                  xlabelsize=10, ylabelsize=10,
-                 xrot=45, yrot=0,
                  figsize=(10,9),
-                 grid=False)
+                 grid=False,
+
+                 by='Species'
+                 )
+
+
+
 plt.show()
 # clean up
 plt.close()
 '''
 #fig, axes = plt.subplots(2,2, figsize=(12, 8))
+'''
 
+'''
 # boxplot using sepal width across all species 
 sns.pairplot(data, hue='Species', markers="o", 
-    plot_kws= { 'alpha': 0.8, 's': 14})
+    plot_kws= { 'alpha': 0.8, 's': 8})
 
 # save to file 
 #plt.savefig('plots/violinplot_iris.png')
 plt.show()
 # clean up
 plt.close()
-
-
+'''
+ '''
+    for patch, color in zip(df['boxes'], colors):
+        patch.set_facecolor(color)
+    '''
 
 '''
 ax.set_title('Sepal length')
