@@ -12,6 +12,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
     - [Scatter Plot](#Scatter-plot)
     - [Violin plot](#Violin-plot)
     - [Pair plot](#Pair-plot)
+* [Conclusions](#Conclusions)
 * [References](#References)
 
 ### Repository contents
