@@ -7,7 +7,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
  - [Preparations](#Preparations)
  - [Dataset Summary](#Dataset-summary)
 * [Data Visualization](#Data-Visualization)
- - [Histogram](#Histogram)
+    - [Histogram](#Histogram)
  - [Box Plot](#Box-plot)
  - [Scatter Plot](#Scatter-plot)
  - [Violin plot](#Violin-plot)
