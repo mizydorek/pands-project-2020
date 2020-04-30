@@ -137,7 +137,7 @@ Data visualization is the discipline of trying to understand data by placing it 
 
 Histogram presentation of all attributes (both petal and sepal width and length) allows visualization of data distribution across all species. 
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/setosa.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/versicolor.hist.png" width="33%" /> <img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/virginica.hist.png" width="33%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/histogram.png" width="100%" />
 
 #### Box plot 
 

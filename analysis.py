@@ -13,12 +13,9 @@ import seaborn as sns
 data = pd.read_csv("iris.csv")
 
 # global variables
-colors = ('red', 'green', 'blue')
-species = ('Setosa', 'Versicolor', 'Virginica')
 setosa = data[data['Species'] == 'Iris-setosa']
 versicolor = data[data['Species'] == 'Iris-versicolor']
 virginica = data[data['Species'] == 'Iris-virginica']
-attr = ['Sepal_length','Sepal_width','Petal_length','Petal_width']
 
 # main menu
 def displayMenu():
@@ -55,18 +52,32 @@ def details():
     print(data[['Petal_width','Species']].groupby('Species').describe())
 
 def histogram():
-    
-    data.groupby('Species').hist()
+    # draw histogram for all attributes across all species 
+    data.hist(bins=20,
+    edgecolor='black', 
+    linewidth=1.0,
+    xlabelsize=10, 
+    ylabelsize=10,
+    figsize=(10,9),
+    grid=False 
+)
+    # save to file 
+    plt.savefig('plots/histogram.png')
     plt.show()
+
+    # clean up
     plt.close()
 
 def boxPlot():
 
+    species = ['Setosa', 'Versicolor', 'Virginica']
+    fig, ax = plt.subplots()
     # boxplot using sepal width across all species 
     sns.boxplot(x="Species", y="Sepal_width", data=data)
     # plot settings 
     plt.title('Sepal width')
     plt.xlabel('')
+    ax.set_xticklabels(species)
     plt.ylabel('Sepal width (cm)')
     # save to file 
     plt.savefig('plots/boxplot_sepal_width.png')
@@ -74,34 +85,40 @@ def boxPlot():
     # clean up
     plt.close()
  
+    fig, ax = plt.subplots()
     # boxplot using sepal length across all species 
     sns.boxplot(x="Species", y="Sepal_length", data=data)
     # plot settings 
     plt.title('Sepal length')
     plt.xlabel('')
+    ax.set_xticklabels(species)
     plt.ylabel('Sepal length (cm)')
     plt.savefig('plots/boxplot_sepal_length.png')
     plt.show()
     # clean up
     plt.close()
 
+    fig, ax = plt.subplots()
     # boxplot using petal width across all species 
     sns.boxplot(x="Species", y="Petal_width", data=data)
     # plot settings 
     plt.title('Petal width')
     plt.xlabel('')
+    ax.set_xticklabels(species)
     plt.ylabel('Petal width (cm)')
     plt.savefig('plots/boxplot_petal_width.png')
     plt.show()
     # clean up
     plt.close()
 
+    fig, ax = plt.subplots()
     # distribution of petal length 
     # boxplot using petal length across all species 
     sns.boxplot(x="Species", y="Petal_length", data=data)
     # plot settings 
     plt.title('Petal length')
     plt.xlabel('')
+    ax.set_xticklabels(species)
     plt.ylabel('Petal length (cm)')
     plt.savefig('plots/boxplot_petal_length.png')
     plt.show()
