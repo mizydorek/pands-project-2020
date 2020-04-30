@@ -4,14 +4,14 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 ## Table of contents
 * [Introduction](#Introduction)
-* [Preparations](#Preparations)
-* [Dataset Summary](#Dataset-summary)
+ * [Preparations](#Preparations)
+ * [Dataset Summary](#Dataset-summary)
 * [Data Visualization](#Data-Visualization)
-* [Histogram](#Histogram)
-* [Box Plot](#Box-plot)
-* [Scatter Plot](#Scatter-plot)
-* [Violin plot](#Violin-plot)
-* [Pair plot](#Pair-plot)
+ * [Histogram](#Histogram)
+ * [Box Plot](#Box-plot)
+ * [Scatter Plot](#Scatter-plot)
+ * [Violin plot](#Violin-plot)
+ * [Pair plot](#Pair-plot)
 * [References](#References)
 
 ## Introduction
