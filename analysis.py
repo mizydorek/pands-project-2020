@@ -13,6 +13,7 @@ import seaborn as sns
 data = pd.read_csv("iris.csv")
 
 # global variables
+filename = 'summary.txt'
 setosa = data[data['Species'] == 'Iris-setosa']
 versicolor = data[data['Species'] == 'Iris-versicolor']
 virginica = data[data['Species'] == 'Iris-virginica']
@@ -22,7 +23,7 @@ def displayMenu():
     print('Main Menu:')
     print('1. Info')
     print('2. Species')
-    print('3. Details')
+    print('3. Summary')
     print('4. Histogram')
     print('5. Box plot')
     print('6. Scatter plot')
@@ -34,23 +35,34 @@ def displayMenu():
 
 def info():
     # basic info shape of dataset
-    print(data.info(), '\nShape: ', data.shape)
+    print('Iris dataset')
+    print('Shape of dataset: {}'.format(data.shape))
+    print('Size of dataset: {}'.format(data.size))
+    print(data.info())
 
 def species():
     # Size and count of each species 
     print(data.groupby('Species').size())
     print(data.groupby('Species').count()) 
 
-def details():
+def summary(filename):
     # Dataset summary and attribute summary for each species. 
     print(data.describe())
     # save summary to txt file
-    data.describe().to_csv("summary.txt", sep=',')
-    print(data[['Sepal_length','Species']].groupby('Species').describe())
-    print(data[['Sepal_width','Species']].groupby('Species').describe())
-    print(data[['Petal_length','Species']].groupby('Species').describe())
-    print(data[['Petal_width','Species']].groupby('Species').describe())
-
+    with open(filename, "w") as writer:
+    # Write summary of data frame to file
+        writer.write('Iris dataset\n\n')
+        writer.write('Shape of dataset: {}\n'.format(data.shape))
+        writer.write('Size of dataset: {}\n\n'.format(data.size))
+        writer.write('Size of {}\n\n'.format(data.groupby('Species').size()))
+        writer.write('Summary of dataset:\n {}\n\n'.format(data.describe()))
+        writer.write('Summary of Setosa:\n {}\n\n'.format(setosa.describe()))
+        writer.write('Summary of Versicolor:\n {}\n\n'.format(setosa.describe()))
+        writer.write('Summary of Virginica:\n {}\n\n'.format(setosa.describe()))
+        writer.write('Summary of Sepal length:\n {}\n\n'.format(data[['Sepal_length','Species']].groupby('Species').describe()))
+        writer.write('Summary of Sepal width:\n {}\n\n'.format(data[['Sepal_width','Species']].groupby('Species').describe()))
+        writer.write('Summary of Petal length:\n {}\n\n'.format(data[['Petal_length','Species']].groupby('Species').describe()))
+        writer.write('Summary of Petal width:\n {}'.format(data[['Petal_width','Species']].groupby('Species').describe()))
 def histogram():
     # draw histogram for all attributes across all species 
     data.hist(bins=20,
@@ -214,7 +226,7 @@ while choice != '9':
     elif choice == '2':
         species()
     elif choice == '3':
-        details()
+        summary(filename)
     elif choice == '4':
         histogram()
     elif choice == '5':
