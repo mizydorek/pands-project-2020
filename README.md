@@ -200,6 +200,8 @@ This gives us a great overview and allows us to easily identify relationship bet
 
 Analysys of above data and plots that we applied to examined the dataset shows that setosa is a distinguishing specie of Iris (the smallest from all of Iris species) and  can be linearly separable from the others. In overall versicolor and virginica are much larger species out of all classes especially in terms of petal length and width. All this was shown in the summarized data and plots that were used to vizualize the data.
 
+*This is a good start for further analysis using machine learning techniques that will be introduced in algorithms module.*
+
 ## References 
 
 README markdown:
