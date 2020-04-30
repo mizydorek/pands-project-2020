@@ -72,7 +72,8 @@ def histogram():
     ylabelsize=10,
     figsize=(10,9),
     grid=False 
-)
+    )
+    plt.suptitle('Histogram for all attributes across all species')
     # save to file 
     plt.savefig('plots/histogram.png')
     plt.show()
@@ -219,6 +220,7 @@ def pairPlot():
     # clean up
     plt.close()
 
+# main menu
 choice = displayMenu()
 while choice != '9':
     if choice == '1':
