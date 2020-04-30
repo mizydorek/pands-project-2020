@@ -3,7 +3,7 @@
 # Fisher's Iris dataset
 # A script to analyse Iris dataset and output information about species
 
-# neccessary libraries 
+# necessary libraries 
 import numpy as np 
 import matplotlib.pyplot as plt
 import pandas as pd
