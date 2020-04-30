@@ -1,7 +1,9 @@
 # Maciej Izydorek 
 # GMIT G00387873
 # Fisher's Iris dataset
-# A script to analyse Iris dataset and output information about species
+# A script to analyse Iris dataset, 
+# displays summarized information of dataset 
+# and creates plots to visualize the date.
 
 # necessary libraries 
 import numpy as np 
