@@ -26,7 +26,7 @@ Repository contains my project for Programming and Scripting modul at GMIT. For 
 
 Main program requires four necessary libraries: numpy, matplotlib, pandas and seaborn. Script displays a menu where user can select option which will be applied to examine the dataset. 
 
-<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/main.png" width="60%" />
+<img src="https://github.com/mizydorek/pands-project-2020/blob/master/images/mainmenu.png" width="60%" />
 
 ## Introduction
 
