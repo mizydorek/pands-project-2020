@@ -160,6 +160,8 @@ By using box plots we can detect and identify outliers. Outlier is a point or se
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_sepal_length.png" width="50%" /><img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/boxplot_sepal_width.png" width="50%" />
 
+#### Observations
+
 It can be seen that there are very few of outliers and it  will not have an impact on our analysis. We can clearly noticed that there is distinct difference in distributions for both Petal width and length across species. Setosa’s petal length and width makes setosa differing from other species. Sepal width seems to be the most similar across all of them. 
 
 #### Scatter plot 
@@ -170,6 +172,8 @@ Also known as Relational plots. We often use scatter plots to find some correlat
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/scatterplot_petal.png" width="100%" />
 
+#### Observations
+
 In terms of sepal length vs width setosa appears to be  the only specie that differs in distinctive way from the others. Versicolor and virginica are a little more varied and overlapping together. Examining the petal length vs width we can observe linear regression across all the species. The plot also shows that this a good way to differentiate between species where setosa again differs the most from other species. 
 
 #### Violin plot 
@@ -177,6 +181,8 @@ In terms of sepal length vs width setosa appears to be  the only specie that dif
 As a categorial plot, violin plot represent distributions of variables for one or more class in dataset using density curves. The width of each curve corresponds with the estimated frequency of data points in each zone. 
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/violinplot_iris.png" width="100%" />
+
+#### Observations
 
 The violin plots clearly show that based on petal length and width setosa's shape is completly different from other two species. The wider part denotes that there is higher density whereas the thinner part corresponds less density. Versicolor and virginica have considerably longer petal than setosa. We can distinguish significant dissimilarity between Setosa's petal and sepal. The differentiation is smaller in species versicolor and virginica. We can also observed that virginica has the highest median in sepal length, petal length and width while sepal width is the most similar across all species and highly concentrated around the median.
 
@@ -186,7 +192,13 @@ Pair plots are a really good way to visualize pairwise bivariate distributions b
 
 <img src="https://github.com/mizydorek/pands-project-2020/blob/master/plots/pairplot_iris.png" width="100%" />
 
+#### Observations
+
 This gives us a great overview and allows us to easily identify relationship between pairwises of attribute of the species. Plot clearly shows that setosa is the most separable and distinctly different from the other two species while there is small overlap in the pairwise relationships of versicolor and virginica species. The density plots espesially petal ones on the diagonal make it easy to compare distributions between the species.
+
+#### Conclusions
+
+Analysys of above data and plots that we applied to examined the dataset shows that setosa is a distinguishing specie of Iris (the smallest from all of Iris species) and  can be linearly separable from the others. In overall versicolor and virginica are much larger species out of all classes especially in terms of petal length and width. All this was shown in the summarized data and plots that were used to vizualize the data.
 
 ## References 
 
